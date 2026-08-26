@@ -1,0 +1,14 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "WorkBoard PostgreSQL",
+      "Group": "Servers",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "databaseWork",
+      "Username": "postgres",
+      "Password": "workborad",
+      "SSLMode": "prefer"
+    }
+  }
+}
