@@ -86,7 +86,7 @@ function HeaderAdmin() {
           </button>
         ) : (
           <Link
-            to="/login-trader"
+            to="/login-client"
             className="rounded-md bg-[#1A2E5A] px-3 py-1.5 text-xs sm:text-sm font-medium text-white hover:bg-[#15254a]"
           >
             Login

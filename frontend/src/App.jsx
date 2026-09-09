@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import LoginClient from "./page/LoginClient";
-import LoginTrader from "./page/LoginTrader";
 import AdminDashboard from "./page/AdminDashboard";
 import EmployeeDashboard from "./page/EmployeeDashboard";
 import Dashboard from "./page/Dashboard";
@@ -22,7 +21,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/home-page" replace />}></Route>
           <Route path="/login-client" element={<LoginClient />}></Route>
-          <Route path="/login-trader" element={<LoginTrader />}></Route>
           <Route path="/admin-dashboard" element={<ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute>}></Route>
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}></Route>
           <Route path="/add-company" element={<ProtectedRoute role="admin"><AddCompany /></ProtectedRoute>}></Route>
