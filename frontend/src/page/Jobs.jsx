@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useSearchParams } from "react-router-dom";
 import Header from "../components/Header";
+
+// หน้า Jobs: หน้าแสดงรายการงานทั้งหมด และใช้ค้นหางานได้ตามคำค้นหา สถานที่ ประเภทงาน และเงินเดือน
 import Footer from "../components/Footer";
 
 const jobTypes = ["", "Full Time", "Hybrid Work", "Work From Home", "Internship"];
@@ -12,7 +14,7 @@ function Jobs() {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [keyword, setKeyword] = useState(searchParams.get("keyword") || "");
+  const [keyword, setKeyword] = useState(searchParams.get("keyword") || ""); 
   const [location, setLocation] = useState(searchParams.get("location") || "");
   const [type, setType] = useState(searchParams.get("type") || "");
   const [maxSalary, setMaxSalary] = useState(searchParams.get("maxSalary") || "300000");
@@ -53,7 +55,7 @@ function Jobs() {
         </div>
 
         <form onSubmit={submitSearch} className="grid gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200 md:grid-cols-4">
-          <input value={keyword} onChange={(event) => setKeyword(event.target.value)} placeholder="ตำแหน่งงาน หรือ บริษัท" className="rounded-lg border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-400" />
+          <input value={keyword} onChange={(event) => setKeyword(event.target.value)} placeholder="ตำแหน่งงาน หรือ บริษัท" className="rounded-lg border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-400" /> 
           <input value={location} onChange={(event) => setLocation(event.target.value)} placeholder="สถานที่" className="rounded-lg border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-400" />
           <select value={type} onChange={(event) => setType(event.target.value)} className="rounded-lg border border-slate-300 px-3 py-2 outline-none focus:ring-2 focus:ring-blue-400">
             <option value="">ทุกประเภทงาน</option>

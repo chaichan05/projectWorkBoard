@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import HeaderAdmin from "../components/HeaderAdmin";
 
+// หน้า ApplicantHistory: แสดงประวัติผู้สมัครทั้งหมดที่มาจาก API /dashboard ให้ admin/ผู้ประกอบการดูได้
+
 function ApplicantHistory() {
   const [applicants, setApplicants] = useState([]);
   const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";

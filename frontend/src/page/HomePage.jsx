@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 
+// หน้า HomePage: หน้า landing page ของระบบ ใช้แสดงค้นหางานและแนะนำบริการต่าง ๆ ให้ผู้ใช้เห็นก่อนเข้าสู่ระบบ
+
 import Footer from "../components/Footer";
 import HomeSearch from "../components/HomeSearch";
 import PopularSerach from "../components/PopularSerach";

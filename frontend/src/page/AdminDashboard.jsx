@@ -2,6 +2,8 @@ import { useAuth } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 import HeaderAdmin from "../components/HeaderAdmin";
 
+// หน้า AdminDashboard: แผงควบคุมหลักของ admin ใช้สำหรับเข้าสู่หน้าลงประกาศงานและดูประวัติผู้สมัคร
+
 const AdminDashBoard = () => {
   const { user } = useAuth();
   return (

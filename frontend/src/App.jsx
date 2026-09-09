@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import LoginClient from "./page/LoginClient";
+import LoginAdmin from "./page/LoginAdmin";
 import AdminDashboard from "./page/AdminDashboard";
 import EmployeeDashboard from "./page/EmployeeDashboard";
 import Dashboard from "./page/Dashboard";
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/home-page" replace />}></Route>
           <Route path="/login-client" element={<LoginClient />}></Route>
+          <Route path="/login-admin" element={<LoginAdmin />}></Route>
           <Route path="/admin-dashboard" element={<ProtectedRoute role="admin"><AdminDashboard /></ProtectedRoute>}></Route>
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}></Route>
           <Route path="/add-company" element={<ProtectedRoute role="admin"><AddCompany /></ProtectedRoute>}></Route>
@@ -32,6 +34,7 @@ function App() {
           <Route path="/jobs" element={<Jobs />}></Route>
           <Route path="/jobs/:id" element={<JobDetail />}></Route>
           <Route path="/home-page" element={<HomePage />}></Route>
+          
           <Route
             path="/employee-dashboard"
             element={<EmployeeDashboard />}

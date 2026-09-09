@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import HeaderAdmin from "../components/HeaderAdmin";
 
+// หน้า JobHistory: แสดงประวัติประกาศงานที่ admin/ผู้ประกอบการเคยลงไว้ เพื่อดูสถานะและข้อมูลประกาศงาน
+
 function JobHistory() {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);

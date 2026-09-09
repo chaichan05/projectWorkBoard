@@ -6,7 +6,9 @@ function ProtectedRoute({ children, role }) {
   const location = useLocation();
 
   if (loading) return <div className="grid min-h-screen place-items-center">Loading...</div>;
-  if (!user) return <Navigate to="/login-client" replace state={{ from: location }} />;
+  if (!user) {
+    return <Navigate to={role === "admin" ? "/login-admin" : "/login-client"} replace state={{ from: location }} />;
+  }
   if (role && user.role !== role) return <Navigate to="/home-page" replace />;
 
   return children;

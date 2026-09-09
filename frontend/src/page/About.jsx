@@ -1,5 +1,7 @@
 import Header from "../components/Header";
 
+// หน้า About: แสดงข้อมูลเกี่ยวกับ WorkBoard ว่าแพลตฟอร์มนี้ช่วยให้ผู้สมัครหางานและช่วยให้องค์กรค้นหาผู้สมัครได้ง่ายขึ้น
+
 function About() {
   return (
     <div className="min-h-screen bg-[#EEF1F2]"><Header />

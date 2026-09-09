@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 
+// หน้า EmployeeDashboard: แผงหน้าหลักของผู้สมัครงาน มีปุ่มให้ไปกรอกโปรไฟล์และเริ่มสมัครงาน
+
 function EmployeeDashboard() {
   return (
     <div className="min-h-screen bg-[#EEF1F2]">

@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+
+// หน้า LoginClient: ใช้สำหรับผู้สมัครงานเข้าสู่ระบบหรือสมัครสมาชิกใหม่ และนำทางไปยังหน้า employee dashboard
 import Header from "../components/Header";
 import logoLogin from "../assets/logoLogin.png";
 

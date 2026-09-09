@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import HeaderAdmin from "../components/HeaderAdmin";
 
+// หน้า Pricing: แสดงแพ็กเกจโฆษณางานต่าง ๆ ที่ admin/ผู้ประกอบการสามารถเลือกเพื่อเริ่มประกาศงาน
+
 function Pricing() {
   return (
     <div className="min-h-screen bg-[#EEF1F2]"><HeaderAdmin />

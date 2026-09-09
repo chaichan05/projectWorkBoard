@@ -4,9 +4,11 @@ import HeaderAdmin from "../components/HeaderAdmin";
 import Footer from "../components/Footer";
 import axios from "axios";
 
-function AddCompany() {
+// หน้า AddCompany: ใช้สำหรับผู้ประกอบการ/แอดมินกรอกข้อมูลประกาศงานใหม่ แล้วส่งไปยัง API /jobs
+
+function AddCompany() { 
   const [jobData, setJobData] = React.useState({
-    title: "",
+    title: "",  
     type_work: "ทุกประเภท",
     location: "",
     description: "",
@@ -24,7 +26,7 @@ function AddCompany() {
     },
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e) => { 
     const { name, value } = e.target;
     if (name.startsWith("contact.")) {
       const key = name.split(".")[1];
@@ -101,7 +103,7 @@ function AddCompany() {
                       type="text"
                       placeholder="เช่น วิศวกรซอฟต์แวร์"
                       className="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-300"
-                      value={jobData.title}
+                      value={jobData.title} 
                       onChange={handleChange}
                     />
                   </div>

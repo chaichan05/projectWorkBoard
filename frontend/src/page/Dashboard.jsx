@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 
+// หน้า Dashboard: ฟอร์มสำหรับผู้สมัครงานกรอกข้อมูลส่วนตัว อัปโหลดเรซูเม่ และส่งข้อมูลไปยัง API /resume
+
 const Dashboard = () => {
   const [formValues, setFormValues] = useState({
     first_name: "",
@@ -26,7 +28,7 @@ const Dashboard = () => {
     const formData = new FormData();
     // เพิ่มข้อมูลจาก formValues ลงใน formData
     if (file) formData.append("imageResume", file);
-    formData.append("first_name", formValues.first_name);
+    formData.append("first_name", formValues.first_name); 
     formData.append("last_name", formValues.last_name);
     formData.append("email", formValues.email);
     formData.append("gender", formValues.gender);
